@@ -5,6 +5,20 @@ from database import Base
 # from sqlalchemy.orm import DeclarativeBase
 # from sqlalchemy.orm import mapped_column
 
+class Users(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String)
+    lastname = Column(String)
+    email = Column(EmailType)
+    dept = Column(String)
+    adhr = Column(String)
+    file = Column(URLType)
+    username = Column(String)
+    password = Column(String)
+
+
 class UserInfo(Base):
     __tablename__ = "user"
 
